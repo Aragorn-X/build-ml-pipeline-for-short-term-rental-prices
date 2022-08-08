@@ -5,6 +5,9 @@ on the price of similar properties. Your company receives new data in bulk every
 to be retrained with the same cadence, necessitating an end-to-end pipeline that can be reused.
 
 In this project you will build such a pipeline.
+Links to repository and Weights&Biases:
+- https://github.com/Aragorn-X/build-ml-pipeline-for-short-term-rental-prices.git
+- https://wandb.ai/oud/nyc_airbnb?workspace=user-oud
 
 ## Table of contents
 

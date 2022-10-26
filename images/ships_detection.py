@@ -671,7 +671,7 @@ with open(txt_file, 'w') as f:
     f.write(path_to_write)
 
 txt_file = './Outputs/E200/geojson2ingest.txt'
-path_to_write = outdatafolder
+path_to_write = outdatafolder[2:]
 print('path to new data: ', path_to_write)
 with open(txt_file, 'w') as f:
     f.write(path_to_write)

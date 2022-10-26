@@ -22,6 +22,20 @@ path2geo = config[task]['geodbFile']
 path2pr = config[task]['prFile']
 path2log = config[task]['logFile']
 
+def delete_log(log_file):
+    '''
+    Deleting log file content except header
+    :param log_file: input log file (.csv format)
+    :return:
+    '''
+    df = pd.read_csv(log_file, header=None)
+    df.head(1).to_csv(log_file, index=False, header=False)
+
+
+#Removing temporary log files
+delete_log(path2geo)
+delete_log(path2pr)
+delete_log(path2log)
 
 def read_csv_log(csv_file, info_data):
     with open(csv_file) as f:
@@ -45,15 +59,6 @@ def lst2str(lst):
     str_info = ','.join(str(x) for x in lst)
     return str_info
 
-
-def delete_log(log_file):
-    '''
-    Deleting log file content except header
-    :param log_file: input log file (.csv format)
-    :return:
-    '''
-    df = pd.read_csv(log_file, header=None)
-    df.head(1).to_csv(log_file, index=False, header=False)
 
 
 proc_info = [['NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN'],
@@ -82,6 +87,3 @@ with open(path2log, 'a', newline='') as fs:
         log.writerow([log_str[i]])
     fs.close()
 
-#Removing geoDB and pr log content after writing to log file
-delete_log(path2geo)
-delete_log(path2pr)

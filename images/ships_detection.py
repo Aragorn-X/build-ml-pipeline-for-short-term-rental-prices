@@ -670,6 +670,11 @@ print('path to write to geojson_test.txt: ', path_to_write)
 with open(txt_file, 'w') as f:
     f.write(path_to_write)
 
+txt_file = './Outputs/E200/geojson2ingest.txt'
+path_to_write = outdatafolder
+print('path to new data: ', path_to_write)
+with open(txt_file, 'w') as f:
+    f.write(path_to_write)
 
 ### End writing to geojson
 

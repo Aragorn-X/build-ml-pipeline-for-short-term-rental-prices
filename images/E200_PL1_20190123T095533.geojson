@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [[[18.550365, 54.533923], [18.55021, 54.533384], [18.548351, 54.533564], [18.548505, 54.534013], [18.550365, 54.533923]]]}, "properties": {"classification": "ship", "identificationscore": 0.998340368270874}}]}
